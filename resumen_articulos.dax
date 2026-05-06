@@ -1,0 +1,16 @@
+//Resumen de artículos entregados y cantidad de tipos de articulos
+
+Resumen Articulos = 
+VAR TotalArts =
+    SUM('tabla'[valor])
+VAR TotalTiposArt =
+    DISTINCTCOUNT(tabla[valor])
+RETURN
+"En el rango seleccionado:"
+    & UNICHAR(10)
+    & "Articulos entregados: "
+    & FORMAT(TotalArt, "0")
+    & UNICHAR(10)
+    & "Tipos de EPP: "
+    & FORMAT(TotalTiposArt, "0")
+
